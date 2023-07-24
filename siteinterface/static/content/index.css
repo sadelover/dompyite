@@ -1,0 +1,1265 @@
+﻿body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+nav a {
+    cursor: pointer;
+}
+
+.indexContent {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.spinnerMask {
+    position: absolute;
+    z-index: 18;
+    opacity: 0.4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #808080;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.toolbar-btn-selected {
+    background-color: #4298ba !important;
+    border: 1px inset;
+}
+
+/* Wobble Horizontal */
+@-webkit-keyframes wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.wobble-horizontal {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(239, 239, 239, 0.5);
+    cursor: pointer;
+}
+
+.wobble-horizontal:hover, .wobble-horizontal:focus, .wobble-horizontal:active {
+    border-radius: 5px;
+    background-color: rgba(221, 233, 233, 0.5);
+    -webkit-animation-name: wobble-horizontal;
+    animation-name: wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/* Grow */
+.grow {
+    display: inline-block;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.grow:hover, .grow:focus, .grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*bootstrap tooltip*/
+.tooltipTitle {
+    width: 100%;
+    max-width: none !important;
+    border-radius: 3px 3px 0 0 !important;
+    border: 1px inset #777;
+    border-bottom-width: 0;
+    background-color: #aaa !important;
+}
+
+.tooltipContent {
+    padding: 10px 5px 5px 5px;
+    border: 1px inset #777;
+    border-top-width: 0;
+    border-radius: 0 0 3px 3px;
+    background-color: rgb(245, 245, 245);
+}
+
+.tooltipContent p {
+    padding: 1px;
+}
+
+.tooltip-arrow {
+    border-right-color: #777;
+}
+
+/*widget/operatingRecord*/
+.spanArrowDataPicker {
+    cursor: pointer;
+}
+
+/*spring container*/
+.springContainer {
+    position: relative;
+    float: left;
+}
+
+.springContainer .panel{
+    top: 10px;
+    bottom: 0;
+    position: absolute;
+    left:  5px;
+    right: 5px;
+    margin-bottom: 0;
+}
+
+.springHead {
+    width: 100%;
+    height: 38px;
+}
+
+.springContent {
+    background-color: blanchedalmond;
+    width: 100%;
+    height: calc(100% - 38px);
+}
+
+.springConfigMask {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    background-color: #8baecb;
+    cursor: move;
+}
+
+    .springConfigMask:hover {
+        opacity: 1;
+        transition: opacity 0.4s;
+    }
+
+.springConfigBtn {
+    position: absolute !important; 
+    font-size: 80px;
+    cursor: pointer;
+    top: calc(50% - 40px) !important;
+
+    left: calc(50% - 40px) !important;
+}
+
+    .springConfigBtn:hover {
+        color: #333;
+    }
+
+.springConfigRemoveBtn {
+    position: absolute !important; 
+    font-size: 32px;
+    cursor: pointer;
+    color: darkred;
+    top: 10px !important;
+    right: 10px !important;
+}
+
+/*workflow index --start*/
+.gd-row {
+    margin-top: 30px;
+    min-height: 800px;
+}
+
+.gd {
+    border: 1px solid #ccc;
+    height: 150px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gd:hover {
+    border: 1px solid #428bca;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.gd-edit-textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+.gd-operator-btns {
+    margin: 10px 0;
+}
+
+.new-gd .media-body.edit {
+    padding-bottom: 10px;
+}
+
+.new-gd{
+    border: 1px solid #ccc;
+    min-height: 150px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gd-operator-btns button {
+    margin-right: 5px;
+}
+
+.workflow-container .media-body {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.icon-row {
+    margin: 10px 0;
+    color: #AAA;
+    display: block;
+}
+
+.icon-row-icon {
+    margin-left: 20px;
+}
+
+.icon-row-text {
+    margin-left: 5px;
+}
+
+.content-row {
+    margin: 20px 10px 0 20px;
+    word-break: break-word;
+    font-size: 13px;
+}
+
+.wf-project-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+/*workflow index --end*/
+
+/*workflow efficiency --start*/
+.workflow-efficiency-table-row {
+    margin-top: 8px;
+    padding: 5px;
+    border-bottom: 1px inset #ccc;
+}
+
+.workflow-efficiency-table-body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.workflow-efficiency-table-body :last-child {
+    border-bottom: 0;
+}
+
+.workflow-efficiency-table-footer {
+    padding: 8px 0 !important;
+    height: 36px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.workflow-efficiency-table-footer:hover {
+    background-color: #eee;
+}
+
+.workflow-efficiency-row {
+    margin-bottom: 30px;
+    word-wrap: break-word;
+}
+
+/*workflow efficiency --end*/
+
+/*workflow notice --start*/
+.mini-dialog {
+    position: absolute;
+    top: 30px;
+    left: -29px;
+    display: none;
+    z-index: 30;
+    opacity: 1;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 400px;
+}
+
+.mini-dialog:before {
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    border-width: 0 15px 10px 15px;
+    border-color: transparent transparent #CCCCCC transparent;
+    position: relative;
+    top: -15px;
+    left: 30px;
+}
+
+.mini-dialog .groups {
+    margin: -15px 10px 10px 20px;
+}
+
+.mini-dialog .members {
+    margin: 40px 10px 10px 20px;
+}
+
+.mini-dialog.open {
+    display: block;
+}
+
+.mini-dialog .member-btn, .mini-dialog .group-btn, .mini-dialog .task-btn {
+    background-color: #ebebeb;
+    border-radius: 12px;
+    max-width: 100px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0px 10px;
+    margin: 5px;
+    max-width: 100px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    color: #666;
+    border: 0;
+    overflow: hidden;
+}
+
+.mini-dialog .member-btn:hover, .mini-dialog .group-btn:hover, .mini-dialog .task-btn:hover {
+    background-color: #ddd;
+    color: #666;
+}
+
+.mini-dialog .member-btn.active, .mini-dialog .group-btn.active, .mini-dialog .task-btn.active {
+    background-color: #D2EDFC;
+    color: #666;
+}
+
+.mini-dialog .member-btn.disabled, .mini-dialog .group-btn.disabled, .mini-dialog .task-btn.disabled {
+    background-color: #ddd;
+    opacity: 0.3;
+    color: #666;
+}
+
+.mini-dialog .title {
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.latest-info-row {
+    margin-top: 20px;
+}
+
+.pr-20 {
+    position: relative;
+    top: -20px;
+}
+
+.info-date-container {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.info-date-row {
+    text-align: right;
+}
+
+.latest-info-title {
+    font-family: 微软雅黑;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.latest-info-content {
+    margin-top: 10px;
+    color: #7B7B7B;
+    display: inline-block;
+}
+
+.reply-media {
+    border-top: 1px solid #CCCCCC;
+    padding: 10px 0;
+}
+
+.reply-media .reply-body {
+    position: relative;
+    left: -130px;
+}
+
+.latest-info-reply {
+    margin-top: 20px;
+}
+
+.latest-info-text {
+    background-color: antiquewhite;
+    width: 90px;
+    border-radius: 10px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.vertical-roll {
+    min-height: 800px !important;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.workflow-container {
+    background-color: white;
+}
+
+.notice-loading {
+    font-size: 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.loading-more {
+}
+
+.loading-more:hover {
+    cursor: pointer;
+}
+
+.notice-item {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.notice-item:hover {
+    color: #4298ba;
+    text-decoration: none;
+}
+
+.filter-title {
+    float: left;
+}
+
+.filter-result {
+    float: left;
+}
+
+.filter-body {
+    position: relative;
+    top: 26px;
+    float: left;
+    left: 7px;
+}
+
+.filter-body .filter-dialog {
+    position: relative;
+    float: left;
+    left: -6px;
+    top: 3px;
+}
+
+.filter-dialog-icon {
+    float: left;
+    margin-left: 10px;
+    color: #888;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.filter-dialog-icon:hover {
+    color: #909090;
+    cursor: pointer;
+}
+
+/*workflow notice --end*/
+/*workflow report --start*/
+.summary-date {
+    text-align: center;
+}
+
+.workflow-report-table {
+    margin-top: 20px;
+}
+
+.workflow-report-table-row {
+    margin-top: 8px;
+    padding: 5px;
+    border-bottom: 1px inset #ccc;
+}
+
+.workflow-report-table-row .text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.workflow-report-detail .description, .workflow-report-memeber .description {
+    border-bottom: 1px solid #CCCCCC;
+    padding-left: 0;
+    margin: 40px 15px 10px 15px;
+    padding-bottom: 10px;
+}
+
+.workflow-report-detail .description h3 {
+    display: inline-block;
+}
+
+.workflow-report-detail .description span {
+    margin-left: 20px;
+}
+
+.workflow-report-detail .item-row, .workflow-report-memeber .item-row {
+    margin-top: 20px;
+    margin-left: 1px;
+}
+
+.workflow-report-detail .item-row .content {
+    padding-top: 20px;
+}
+
+.workflow-report-memeber .icon, .workflow-report-detail .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.report-summary-row .last-week {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    cursor: pointer;
+    color: #428bca;
+}
+
+.report-summary-row .next-week {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    cursor: pointer;
+    color: #428bca;
+}
+
+.item-text-color {
+    color: #909090;
+}
+
+.workflow-report-memeber {
+    margin-top: 50px;
+}
+
+.workflow-report-memeber .content {
+    margin-left: 50px;
+}
+
+.workflow-report-memeber .content .name {
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.workflow-report-memeber .content .text {
+    word-wrap: break-word;
+}
+
+.workflow-report-memeber .description .text {
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/*workflow report --end*/
+
+/*workflow report detail --start*/
+#backTo {
+    text-decoration: none;
+}
+
+#backTo:hover {
+    text-decoration: none;
+}
+
+.back-section {
+    padding: 20px 0 5px 0;
+}
+
+.description-section {
+}
+
+.description-section .first-row {
+    color: #909090;
+}
+
+.description-section .edit {
+    margin-left: 20px;
+}
+
+.description-section .star {
+    margin-left: 10px;
+}
+
+.description-section .icon {
+    width: 31px;
+    height: 31px;
+}
+
+.second-row .msg {
+    margin-left: 10px;
+}
+
+.second-row .msg:hover {
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+.second-row .msg .content {
+    word-wrap: break-word;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.opteration-icon {
+    color: cornflowerblue;
+    margin-left: 20px;
+}
+
+.avatar-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.avatar-name {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.discussion-row, .breakdown-row {
+    padding-top: 40px;
+}
+
+.discussion-row .media-body {
+    margin-top: 10px;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 30px;
+    margin-left: 15px;
+    padding-left: 0px;
+}
+
+.row-toggle {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.row-toggle-icon {
+    color: #909090;
+    margin-left: 5px;
+}
+
+.row-toggle-icon:hover {
+    cursor: pointer;
+}
+
+.discussion-media {
+    padding: 10px 0;
+}
+
+.reply-editor {
+    padding-top: 5px;
+    margin-top: 40px;
+    width: 65%;
+    margin-left: 10%;
+}
+
+#editor {
+    max-height: 250px;
+    height: 250px;
+    background-color: white;
+    border-collapse: separate;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 4px;
+    box-sizing: content-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    overflow: auto;
+    outline: none;
+    margin-top: 10px;
+}
+
+div[data-role="editor-toolbar"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dropdown-menu a {
+    cursor: pointer;
+}
+
+.reply-bottom-section .buttons {
+    text-align: right;
+    margin: 20px 0 50px 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#notice_detail .star {
+    position: absolute;
+    font-size: 15px;
+    cursor: pointer;
+    top: 5px;
+}
+
+#notice_detail .star:hover {
+    font-size: 1.5em;
+    cursor: pointer;
+    top: 2px;
+    left: 14px;
+}
+
+#notice_detail .description-section {
+    position: relative;
+    word-wrap: break-word;
+}
+
+#notice_detail .description-row {
+    margin: 30px 10px;
+}
+
+#notice_detail .latest-info-description {
+    overflow: auto;
+    text-indent: 30px;
+}
+
+#notice_detail .latest-info-description img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+#notice_detail .icon-star {
+    color: yellowgreen;
+}
+
+/*workflow report detail --end*/
+
+/*workflow mine --start*/
+#workflow-mine {
+    min-height: 800px;
+}
+
+.member-nav {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 20px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.member-nav ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.member-nav ul .active {
+    font-weight: bold;
+}
+
+.member-nav ul li {
+    float: left;
+}
+
+.member-nav ul a:hover, .member-nav ul .active a {
+    color: #84a099;
+}
+
+.member-nav ul a {
+    float: left;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    color: #999;
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#workflow-mine .top-section {
+    margin-top: 30px;
+    padding-bottom: 5px;
+}
+
+#workflow-mine .status {
+    font-size: 14px;
+}
+
+#workflow-mine .edit-btn, #workflow-transaction .edit-btn {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.edit-textarea {
+    word-wrap: break-word;
+    resize: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 420px;
+    line-height: 1.6;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-bottom: 1px dotted #cccccc;
+    border-radius: 0;
+    outline: 0;
+}
+
+.drop-active {
+    background: antiquewhite;
+    border: 2px dotted #BBB;
+}
+
+.list-complete {
+    position: relative;
+    top: 25px;
+    text-align: right;
+}
+
+.linkage {
+    text-decoration: none;
+    color: #909090;
+}
+
+.linkage:hover {
+    color: #4298ba;
+    text-decoration: none;
+}
+
+.mine-avatar-name {
+    font-weight: normal;
+    position: relative;
+    top: -3px;
+    font-size: 28px;
+    color: #333;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.mine-avatar-desc {
+    position: relative;
+    top: -3px;
+    color: #999;
+}
+
+.mine-buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mine-button {
+    margin-right: 10px;
+    background-color: #DDD;
+    border-radius: 15px;
+    width: 70px;
+}
+
+.empty-message {
+    color: #bcbcbc;
+    line-height: 2em;
+    position: relative;
+    left: 50px;
+}
+
+.task-row {
+    color: #777777;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.task-row .title {
+    margin-left: 10px;
+}
+
+.task-row .task-type {
+    color: black;
+    word-wrap: break-word;
+}
+
+.task-row .task-item {
+    padding: 5px 0;
+    word-wrap: break-word;
+}
+
+.task-row .task-title:hover {
+    cursor: pointer;
+}
+
+.task-row .task-item .glyphicon {
+    margin-right: 10px;
+}
+
+.task-row .task-item .glyphicon:not(.icon-status):hover {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #428bca;
+    font-size: 20px;
+    cursor: pointer;;
+}
+
+.urgent-task-row .timer {
+    color: coral;
+}
+
+.pend-task-row .timer {
+    color: deepskyblue;
+}
+
+.task-item .task-title {
+    padding-left: 0;
+}
+
+.task-body:not(.editing):hover {
+    background-color: #BBB;
+    color: black;
+    border-radius: 10px;
+}
+
+.screen-row {
+    padding-bottom: 50px;
+}
+
+.task-item.ui-draggable-dragging{
+    width: 1000px;
+    background-color: aliceblue;
+}
+
+#workflow-mine .member-selector{
+    width: 50%;
+    float: left;
+}
+
+/*workflow mine --end*/
+
+/*workflow team --start*/
+
+#workflow-team {
+    min-height: 600px;
+}
+
+#workflow-team .title-row {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#workflow-team .modal-dialog {
+    margin-top: 10%;
+}
+
+.dpt-nm {
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.role-nm {
+    font-size: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.member-media:hover {
+    cursor: pointer;
+}
+
+.member-selected {
+    background-color: #66CC99;
+    color: white;
+    border-radius: 23px;
+}
+
+.dpt-content-row {
+    margin: 20px 0;
+}
+
+.memeber-container .member {
+}
+
+.memeber-container .operator {
+    position: absolute;
+}
+
+#workflow-team .btn-del-member {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 10px;
+}
+
+#workflow-team .add-member {
+    padding-top: 5px;
+}
+
+#workflow-team .media {
+    margin: 5px 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.team-avatar-name {
+    position: relative;
+    top: 10px;
+}
+
+.team-avatar-desc {
+    position: relative;
+    top: 5px;
+    color: #CCC;
+}
+
+.dpt-row {
+    margin-bottom: 30px;
+}
+
+.workflow-template {
+    display: none !important;
+}
+
+/*workflow team --end*/
+
+/*workflow transaction --start*/
+#workflow-transaction {
+    min-height: 800px;
+}
+
+#workflow-transaction .top-section {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #CCC;
+    padding-top: 20px;
+    padding-left: 0;
+}
+
+#workflow-transaction .add-section {
+    margin-top: 20px;
+    display: none;
+}
+
+.project-operator {
+    text-align: right;
+}
+
+.statistic-icons {
+    text-align: right;
+}
+
+.trans-edit-textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+.trans-edit-textarea.trans-detail {
+    margin-top: 10px;
+    height: 125px;
+}
+
+#workflow-transaction .add-btn {
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#workflow-transaction .task-items {
+    border-top: 1px solid #CCC;
+}
+
+#workflow-transaction .success-alert {
+    position: absolute;
+    z-index: 999;
+}
+
+#workflow-transaction .nav-row {
+    padding: 20px 0 0 0;
+}
+
+#workflow-transaction .nav-row a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#workflow-transaction #del-project {
+    margin-left: 10px;
+}
+
+#workflow-transaction .delete-dialog, #workflow-transaction .error-dialog {
+    display: none;
+}
+
+.add-btn-icon {
+    color: #ffffff;
+}
+
+.add-btn-text {
+    margin-left: 20px;
+}
+
+.project-member-menu li {
+    cursor: pointer;
+    padding: 5px 0 5px 10px;
+}
+
+.project-member-menu li:hover {
+    background-color: #aaaaaa;
+}
+
+.project-member-menu .empty-member {
+    font-weight: bold;
+}
+
+/*workflow transaction --end*/
+/*workflow group --start*/
+#workflow-group {
+    min-height: 800px;
+    padding: 30px 0;
+}
+
+#workflow-group .add-group {
+    color: cornflowerblue;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.input-error {
+    border-color: red;
+    -webkit-box-shadow: 0 0 8px red;
+    box-shadow: 0 0 8px red;
+}
+
+#workflow-group .group-members {
+    padding: 20px;
+}
+
+#workflow-group .group-name {
+    font-size: large;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 5px;
+}
+
+#workflow-group .draggable{
+    z-index: 1000;
+}
+
+/*workflow group --end*/
+
+/*Map --start*/
+.map-control-btn {
+    position: relative;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    background-color: rgb(13, 155, 242);
+    float: right;
+    cursor: pointer;
+    margin-right: 1px;
+}
+/*Map --end*/
+
+@font-face {
+    font-family: 'Kravitz';
+    src: url('../font/HelveticaNeueLTPro-LtEx.otf');
+    font-weight: normal;
+    font-style: normal;
+}
