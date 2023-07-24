@@ -1,0 +1,25 @@
+
+g_systemAPIList = [
+    'condition_last_minutes',
+    'get_today_data_average',
+    'get_today_data_average_when_running',
+    'get_yesterday_data_average',
+    'get_yesterday_data_average_when_running',
+    'get_day_average_this_month_when_running',
+    'get_day_average_last_month_when_running',
+    'get_today_data_max',
+    'get_data_delta_of_period',
+    'get_today_data_min',
+    'get_today_data_delta',
+    'get_yesterday_data_delta',
+    'get_month_delta_this_year',
+    'get_day_delta_this_month',
+    'get_lastmonth_delta',
+    'get_thismonth_delta',
+    'get_data_is_not_changing',
+    'get_moving_average_when_running',
+    'get_moving_average',
+    "get_data_thisyear_at_month_day_time",
+    "accum_point",
+    "get_today_data_begin"
+]
